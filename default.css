@@ -1,18 +1,17 @@
 :root{
     --mainColor:#eaeaea;
-    --secondaryColor:#fff;
-
     --borderColor:#c1c1c1;
-
-    --mainText:black;
-    --secondaryText:#4b5156;
-    --buttonColor: black;
 }
 
+/* HTML Elements */
 html, body {
     padding: 0;
-    margin: 0;
+    margin:0;
     font-family: 'Noto Sans', sans-serif;
+}
+
+h1, h2 {
+    color: white;
 }
 
 h1 { font-size: 56px;}
@@ -34,26 +33,41 @@ li {
 }
 
 p, li, span, label, input, textarea{
-    color: var(--secondaryText);
+    color: black;
     font-family: 'Noto Sans', sans-serif;
 }
 
+a {
+    text-decoration: none;
+    transition: all 0.2s;
+    color: purple;
+}
+a:hover {
+    color: blue;
+}
+
+
+/* Globals */ 
+
 .s1 {
-    background-color: var(--mainColor);
-    border-bottom: 1px solid var(--borderColor);
+    border-bottom: 10px solid black;
     overflow: auto;
     padding: 30px;
 }
 
 .s2 {
-    background-color: var(--secondaryColor);
-    border-bottom: 1px solid var(--borderColor);
+    border-bottom: 10px solid black;
     overflow: auto;
 }
 
 .main-container {
     width:1200px;
     margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.65);
 }
 
 .section-wrapper {
@@ -71,21 +85,83 @@ p, li, span, label, input, textarea{
     gap: 20px;
     justify-content: center;
     margin-bottom: 20px;
+    padding-top: 20px;
 }
 
-.project-item {
-    border: 1px solid var(--borderColor);
+.left-column, .right-column {
+    margin: auto;
+}
+
+/* Hero section */
+
+#prof-pic {
     border-radius: 5px;
+    width: 100%;
+    height: auto;
     box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.65);
+
+}
+
+#hero {
+    border-radius: none;
+    box-shadow: none;
 }
 
 #hero-section {
     background-image: url("/img/keyboard.jpg");
     background-size: cover;
 
-    /* height: 100px; */
+    background-position-y: -325px;
     background-repeat: no-repeat;
 } 
+
+
+/* About Me section */
+
+.exp-item {
+    border: 0.25px solid var(--borderColor);
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px;
+    box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.65);
+    background-color: white;
+}
+
+.bar {
+    background-color: white;
+    margin-top: 11px;
+    border: 1px solid var(--borderColor)
+}
+
+.bar>div {
+    background-color: black;
+    height: 10px;
+}
+
+ .blTextBlock {
+    padding: 3% 0px 3% 0px;
+}
+
+.skills-wrapper {
+    min-width: 200px;
+}
+
+.blue {
+    background-color:rgb(225, 225, 255);
+    /* background-color: rgb(206, 208, 233); */
+}
+
+.darker-blue {
+    background-color: rgba(100, 100, 255);
+}
+
+/* Project Section  */
+
+.project-item {
+    border: 1px solid var(--borderColor);
+    border-radius: 10px;
+    box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.65);
+}
 
 .screenshot {
     min-height: 210px;
@@ -115,61 +191,15 @@ p, li, span, label, input, textarea{
       background-color: black;
 }
 
-.exp-item {
-    border: 0.25px solid var(--borderColor);
-    padding: 20px;
-    border-radius: 5px;
-    margin: 20px;
-    box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.65);
+.orange {
+    background-color: rgb(248, 139, 89);
 }
 
-#prof-pic {
-    border-radius: 10%;
-    width: 100%;
-    height: auto;
-    box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.65);
-
+.light-orange {
+    background-color: rgb(248, 219, 169);
 }
 
-.left-column {
-    margin: auto;
-}
-.right-column {
-    margin: auto;
-    color: white;
-}
-
-a {
-    text-decoration: none;
-    transition: all 0.2s;
-    color: orangered;
-}
-a:hover {
-    color: blue;
-}
-
-@media screen and (max-width: 1200px) {
-    .main-container{
-        width: 95%;
-    }
-    .left-column {
-        margin-right: 20px;
-    }
-    .section-wrapper {
-        grid-template-columns: repeat(auto-fit, 320px);
-    }
-    .blurb-wrapper, .skills-wrapper {
-        grid-column: span 2;
-    }
-    #hero-section {
-        background-image: url("img/keyboard.jpg");
-        background-size: cover;
-    
-        background-position: center;
-        background-repeat: no-repeat;
-    } 
-}
-
+/* Form section */
 .vertical-form {
     display: grid;
     grid-template-columns: 1fr;
@@ -214,25 +244,25 @@ textarea {
     border-radius: 5px;
 }
 
-.bar {
-    background-color: white;
-    margin-top: 11px;
-    border: 1px solid var(--borderColor)
-  }
-.bar>div {
-    background-color: black;
-    height: 10px;
- }
-.blTextBlock {
-    padding: 3% 0px 3% 0px;
+/* Media queries */
+@media screen and (max-width: 1200px) {
+    .main-container{
+        width: 95%;
+    }
+    .left-column {
+        margin-right: 20px;
+    }
+    .section-wrapper {
+        grid-template-columns: repeat(auto-fit, 320px);
+    }
+    .blurb-wrapper, .skills-wrapper {
+        grid-column: span 2;
+    }
+    #hero-section {
+        background-image: url("img/keyboard.jpg");
+        background-size: cover;
+    
+        background-position: center;
+        background-repeat: no-repeat;
+    } 
 }
-
-.skills-wrapper {
-    min-width: 200px;
-}
-
-/* 
-
-div {
-    border: 0.5px dashed lightcoral;
-} */
