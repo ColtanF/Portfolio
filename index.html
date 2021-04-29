@@ -3,9 +3,10 @@
     <head>
         <meta name="viewport" content="width=device-width" charset="utf-8">
         <title>Coltan Franke</title>
-        <link rel="stylesheet" type="text/css" href="default.css">
+        <link rel="stylesheet" type="text/css" href="styles/default.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+        <script src="main.js"></script>
     </head>
     <body>
         <section class="s1" id="hero-section">
@@ -49,19 +50,19 @@
                             </div>
                         </div>
                         <div class="blTextBlock">
-                            <div>HTML/CSS, JavaScript, Java, C, Flask</div>
+                            <div>HTML/CSS, JavaScript, Java, Flask</div>
                             <div class="bar">
                                 <div style="width: 80%"></div>
                             </div>
                         </div>
                         <div class="blTextBlock">
-                            <div>R, C#, PowerShell</div>
+                            <div>C#, PowerShell</div>
                             <div class="bar">
                                 <div style="width: 60%"></div>
                             </div>
                         </div>
                         <div>
-                            (See my <a href="#">resume</a> for more tech I've worked with)
+                            (See my <a href="resume.html">resume</a> for more tech I've worked with)
                         </div>
                     </div>
                     <strong>Experience:</strong>
@@ -91,36 +92,36 @@
                 <div class="item-wrapper">
                     <div>
                         <div class="project-item">
-                            <div class="screenshot" style="background-color: maroon;"></div>
+                            <img class="screenshot" src="/img/fits.jpg" alt="FITS issues screen."/>
                             <div class="proj-text">
                                 <strong>FITS</strong>
                                 <p>
                                     FITS is a locally hosted issue tracking website created using Flask, Bootstrap, and MySQL.
                                 </p>
-                                <a href="https://github.com/ColtanF/FITS" class="link-btn">View Code</a>
+                                <a href="https://github.com/ColtanF/FITS" target="_blank" class="link-btn">View Code</a>
                                 <!-- <a href="https://coltanf.github.io" class="link-btn">Live Site</a> -->
                             </div>
                         </div>
                     </div>
                     <div>
                         <div class="project-item">
-                            <div class="screenshot" style="background-color: navy;"></div>
+                            <img class="screenshot" src="/img/LoLFlask3.jpg" alt="FITS issues screen."/>
                             <div class="proj-text">
-                                <strong>MealPlanner</strong>
-                                <p>A meal planning website made with Flask, Bootstrap, and MySQL.</p>
-                                <a href="https://github.com/ColtanF/MealPlanner" class="link-btn">View Code</a>
+                                <strong>LoLFlask</strong>
+                                <p>League of Legends helper website built using Flask that utilizes 
+                                    Riot's live game API to retrieve information about a player's current match. </p>
+                                <a href="https://github.com/ColtanF/LoLFlask" target="_blank" class="link-btn">View Code</a>
                                 <!-- <a href="#" class="link-btn">Live Site</a> -->
                             </div>
                         </div>
                     </div>
                     <div>
                         <div class="project-item">
-                            <div class="screenshot" style="background-color: darkblue;"></div>
+                            <img class="screenshot" src="/img/jobhunt2.jpg" alt="FITS issues screen."/>
                             <div class="proj-text">
-                                <strong>LoLFlask</strong>
-                                <p>League of Legends helper website built using Flask that utilizes 
-                                    Riot's live game API to retrieve information about a player's current match. </p>
-                                <a href="https://github.com/ColtanF/LoLFlask" class="link-btn">View Code</a>
+                                <strong>JobHunt</strong>
+                                <p>A branch from FITS, JobHunt is a job search tracking tracking website built with Python, Flask, and MySQL.</p>
+                                <a href="https://github.com/ColtanF/FITS/tree/jobhunt" target="_blank" class="link-btn">View Code</a>
                                 <!-- <a href="#" class="link-btn">Live Site</a> -->
                             </div>
                         </div>
@@ -128,21 +129,21 @@
                 </div>
             </div>
         </section>
-        <section class="s2">
-            <div class="main-container">
+        <section class="s2 contact-section">
+            <div class="main-container contact-container">
                 <h3>Contact me</h3>
                 <div class="section-wrapper">
                     <p>Get in touch here, or send me an email at coltan.franke@gmail.com.</p>
                     <form class="vertical-form">
                         <label class="form-label" for="name">Name: </label>
-                        <input class="form-input" type="text" name="name">
+                        <input class="form-input" aria-label="name" type="text" name="name" id="name">
                         <label class="form-label" for="subject">Subject: </label>
-                        <input class="form-input" type="text" name="subject">
+                        <input class="form-input" aria-label="subject" type="text" name="subject" id="subject">
                         <label class="form-label" for="email">Email: </label>
-                        <input class="form-input" type="text" name="email">
+                        <input class="form-input" aria-label="email" type="text" name="email" id="email">
                         <label class="form-label" for="message">Message: </label>
-                        <textarea type="text" name="message"></textarea>
-                        <input id="submit-btn" type="submit" value="Send">
+                        <textarea type="text" name="message" id="message"></textarea>
+                        <input id="submit-btn" aria-label="submit" type="button" onclick="submitForm()" value="Send">
                     </form>
                 </div>
             </div>

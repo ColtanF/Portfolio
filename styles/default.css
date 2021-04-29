@@ -46,17 +46,16 @@ a:hover {
     color: blue;
 }
 
-
 /* Globals */ 
 
 .s1 {
-    border-bottom: 10px solid black;
+    border-bottom: 7px solid black;
     overflow: auto;
     padding: 30px;
 }
 
 .s2 {
-    border-bottom: 10px solid black;
+    border-bottom: 7px solid black;
     overflow: auto;
 }
 
@@ -76,7 +75,6 @@ a:hover {
     margin: 0 20px 0 20px;
     gap: 20px;
 }
-
 
 .item-wrapper {
     grid-column: span 2;
@@ -99,7 +97,6 @@ a:hover {
     width: 100%;
     height: auto;
     box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.65);
-
 }
 
 #hero {
@@ -164,8 +161,11 @@ a:hover {
 }
 
 .screenshot {
-    min-height: 210px;
+    display: block;
+    max-width:317px;
+    width: auto;
     border: 1px solid black;
+    object-fit: cover;
 }
 
 .proj-text {
@@ -209,6 +209,7 @@ a:hover {
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 20px;
+    box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.65);
 }
 
 .form-label {
@@ -222,6 +223,14 @@ a:hover {
     margin-right: 10px;
     border: 1px solid var(--borderColor);
     border-radius: 5px
+}
+
+.contact-section {
+    background-color: lightgray;
+}
+
+.contact-container {
+    background-color: white;
 }
 
 textarea {
@@ -247,7 +256,7 @@ textarea {
 /* Media queries */
 @media screen and (max-width: 1200px) {
     .main-container{
-        width: 95%;
+        width: 85%;
     }
     .left-column {
         margin-right: 20px;
@@ -257,6 +266,7 @@ textarea {
     }
     .blurb-wrapper, .skills-wrapper {
         grid-column: span 2;
+        max-width: 250px;
     }
     #hero-section {
         background-image: url("img/keyboard.jpg");
@@ -265,4 +275,7 @@ textarea {
         background-position: center;
         background-repeat: no-repeat;
     } 
+    .s1, .s2 {
+        padding: 0px;
+    }
 }
