@@ -1,6 +1,7 @@
 :root{
     --mainColor:#eaeaea;
     --borderColor:#c1c1c1;
+    --formBorderColor:gray;
 }
 
 /* HTML Elements */
@@ -149,7 +150,8 @@ a:hover {
 }
 
 .darker-blue {
-    background-color: rgba(100, 100, 255);
+    background-color: #6c5ce7;
+    /* background-color: rgba(100, 100, 255); */
 }
 
 /* Project Section  */
@@ -192,11 +194,13 @@ a:hover {
 }
 
 .orange {
-    background-color: rgb(248, 139, 89);
+    background-color: #f0932b;
+    /* background-color: rgb(248, 139, 89); */
 }
 
 .light-orange {
-    background-color: rgb(248, 219, 169);
+    background-color: #F8EFBA;
+    /* background-color: rgb(248, 219, 169); */
 }
 
 /* Form section */
@@ -204,8 +208,8 @@ a:hover {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
-    background-color: var(--mainColor);
-    border: 0.5px solid var(--borderColor);
+    background-color:#cbecea;
+    border: 0.5px solid var(--formBorderColor);
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 20px;
@@ -221,7 +225,7 @@ a:hover {
     min-height: 40px;
     margin-left: 10px;
     margin-right: 10px;
-    border: 1px solid var(--borderColor);
+    border: 1px solid var(--formBorderColor);
     border-radius: 5px
 }
 
@@ -233,12 +237,19 @@ a:hover {
     background-color: white;
 }
 
+.turquoise {
+    background-color: #00cec9;
+}
+.light-turquoise {
+    background-color: #b8fff9;
+}
+
 textarea {
     resize:vertical;
     margin-left: 10px;
     margin-right: 10px;
     border-radius: 5px;
-    border: 1px solid var(--borderColor);
+    border: 1px solid var(--formBorderColor);
     min-height: 100px;
 }
 
