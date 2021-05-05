@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles/projects.css">
+    <script src="projects.js"></script>
     <title>JobHunt</title>
 </head>
 <body>
@@ -12,9 +13,15 @@
         <h1>JobHunt</h1>
         <h4>A branch from FITS, JobHunt is a job search tracking tracking website built with Python, Flask, and MySQL.</h4>
         <p><a href="https://github.com/ColtanF/FITS/tree/jobhunt" target="_blank" class="link-btn">GitHub Code</a>   
-            <a href="#" class="link-btn">Demo Site</a></p>
-        <div class="img-container">
-            <img src="/img/JobHunt.jpg" alt="JobHunt screenshot">
+            <!-- <a href="#" class="link-btn">Demo Site</a> -->
+            </p>
+        <div class="img-container ">
+            <img class="mySlides" src="/img/JobHuntHome.jpg" alt="JobHunt screenshot">
+            <img class="mySlides" src="/img/JobHuntJobs.jpg" alt="JobHunt screenshot">
+            <img class="mySlides" src="/img/JobHuntView.jpg" alt="JobHunt screenshot">
+            <img class="mySlides" src="/img/JobHuntAdd.jpg" alt="JobHunt screenshot">
+            <button class="left-button w3-button" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="right-button w3-button" onclick="plusDivs(+1)">&#10095;</button>
         </div>
         <br>
         <h3>About</h3>
@@ -35,7 +42,7 @@
         <p>
             In JobHunt, a user can add, edit, view, and delete job postings that they find online. JobHunt uses 
             the information that the user enters to create convenient links to information such as the company's 
-            office location and the application site. A user can also personalize their job postings by listing
+            office location and the application site. A user can personalize their job postings by listing
             the experience requirements that they do and do not feel that they meet. They can also rate jobs that
             they add from 1-5 stars, and the top rated jobs will be displayed to the user on their home page.
         </p>
@@ -64,5 +71,9 @@
         </ul>
         
     </div>
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+    </script>
 </body>
 </html>
